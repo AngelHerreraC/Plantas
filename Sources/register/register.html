@@ -31,7 +31,7 @@
 </head>
 <body>
     <div class="container m-2" >
-        <form action="">
+        <form action="" id="form">
             <div class="row m-2">
                 <div class="col-md mt-3 ">
                     <input type="text" name="nombre" id="" placeholder="Nombre" class="form-control p-3">
@@ -44,10 +44,10 @@
                     <input type="text" name="origen" id="" placeholder="origen" class="form-control p-3">
                 </div>
                 <div class="col-md mt-3">
-                    <select name="" id="" class="form-control" placeholder = "Tipo">
+                    <select name="tipo-planta" id="" class="form-control" placeholder = "Tipo">
                         <option value="arbol"></i>Arbol</option>
-                        <option value="arbol">Flor</option>
-                        <option value="arbol">Arbusto</option>
+                        <option value="flor">Flor</option>
+                        <option value="arbusto">Arbusto</option>
                     </select>
                 </div>
                 <div class="col-md mt-3 ">    
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-md mt-3">
                     <label for="" class="form-label"> Clima</label>
-                    <select name="" id="" class="form-control" placeholder = "">
+                    <select name="tipo-clima" id="" class="form-control" placeholder = "">
                         <option value="calido">Calido</option>
                         <option value="humedo">Humedo</option>
                         <option value="seco">Seco</option>
@@ -110,14 +110,14 @@
             </div>
             <div class="row m-2 mt-5">
                 <div class="col-12">
-                    <input type="submit" class="btn col-12 p-3 boton" value="Registrarse">
+                    <input type="submit" class="btn col-12 p-3 boton" value="Registrarse" id="btn">
                 </div>
             </div>
         </form>
     </div>
 
 
-    <script src="/Sources/script.js"></script>
+    <script src="register.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
