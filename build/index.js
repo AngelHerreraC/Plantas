@@ -4,13 +4,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const path_1 = __importDefault(require("path"));
+const plantsroutes_1 = __importDefault(require("./routes/plantsroutes"));
 const app = (0, express_1.default)();
-app.use(express_1.default.json());
 const PORT = 3000;
-app.get('/ping', (_req, res) => {
-    console.log("pong");
-    res.send("pong");
+app.use(express_1.default.static(path_1.default.join(__dirname, 'build')));
+app.use(express_1.default.static(path_1.default.join(__dirname, 'register')));
+app.use(express_1.default.json());
+// app.use(express.static(path.join(__dirname, 'register')))
+// app.get('/register', (_req ,res) => {
+//     res.sendFile(path.join(__dirname,'register', 'register.html'));
+//   });
+app.get('/register', (_req, res) => {
+    res.sendFile(path_1.default.join(__dirname, 'register', 'register.html'));
 });
+app.use('/api/plantas', plantsroutes_1.default);
 app.listen(PORT, () => {
-    console.log(`server on port ${PORT}`);
+    console.log(`Servidor en ejecución en http://localhost:${PORT}`);
 });

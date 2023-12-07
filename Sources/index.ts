@@ -1,19 +1,32 @@
 import express from 'express'
-import placeHolderRouter from './routes/placeholderroute'
+import path from 'path'
+import router from './routes/plantsroutes'
 
 
 const app = express()
-app.use(express.json())
-
 const PORT = 3000
 
-app.get('/ping', (_req, res) =>{
-    console.log("pong")
-    res.send("pong")
-})
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.use(express.static(path.join(__dirname, 'register')));
+app.use(express.json())
+
+
+// app.use(express.static(path.join(__dirname, 'register')))
+
+
+// app.get('/register', (_req ,res) => {
+//     res.sendFile(path.join(__dirname,'register', 'register.html'));
+//   });
+app.get('/register', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'register', 'register.html'));
+  });
+
+app.use('/api/plantas', router)
+
 
 app.listen(PORT,()=>{
-    console.log(`server on port ${PORT}`)
+    console.log(`Servidor en ejecución en http://localhost:${PORT}`)
 })
 
-app.use('/api/plantas', placeHolderRouter)

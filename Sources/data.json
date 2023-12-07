@@ -1,3 +1,39 @@
-{
-    
-}
+[
+  {
+    "nombre": "",
+    "fecha": "",
+    "origen": "",
+    "tipo-planta": "arbol",
+    "frec-podar": "",
+    "frec-regar": "",
+    "frec-fertilizar": "",
+    "tipo-clima": "calido",
+    "notas-especiales": ""
+  },
+  {
+    "nombre": "Adalberto",
+    "fecha": "2023-12-12",
+    "origen": "awd",
+    "tipo-planta": "arbusto",
+    "podar": "on",
+    "frec-podar": "2",
+    "regar": "on",
+    "frec-regar": "3",
+    "frec-fertilizar": "",
+    "tipo-clima": "humedo",
+    "notas-especiales": "awdawd"
+  },
+  {
+    "nombre": "Adalberto",
+    "fecha": "2023-12-12",
+    "origen": "awd",
+    "tipo-planta": "arbusto",
+    "podar": "on",
+    "frec-podar": "2",
+    "regar": "on",
+    "frec-regar": "3",
+    "frec-fertilizar": "",
+    "tipo-clima": "humedo",
+    "notas-especiales": "awdawd"
+  }
+]
