@@ -1,30 +1,41 @@
-const form = document.querySelector('#form');
-const btn = document.querySelector("btn")
 
-const getData = (event) => 
+const form = document.querySelector('#form');
+const btn = document.querySelector("#btn")
+
+
+const getData = () => 
 {
-    event.preventDefault();
-    const datos = new FormData(event.target)
+
+    const datos = new FormData(form)
     const datosCompletos = Object.fromEntries(datos.entries())
     form.reset();
     return datosCompletos
+
 }
 
-async function postData()
+const postData = async () =>
 {
-    const newPlant = getData()
-    try
-    {
-        const response = await fetch('http://localhost:3000/api/plantas', { method: 'POST', headers : {'Content-Type': }})
+    const JSONPlant = getData()
+    const newJsonPlant = JSON.stringify(JSONPlant);
+    try {
+        const response = await fetch('localhost:3000//api/plantas', {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: newJsonPlant
+        });
+        const data = await response.json();
+        console.log('Respuesta del servidor:', data);
+
+    } catch (err) {
+        console.log(`Existe un error: ${err}`);
     }
-    catch(err)
-    {
-        console.log(err)
-    }
+
 }
 
 btn.addEventListener('click', (event) => 
 {
     event.preventDefault()
-
+    postData()
 })
