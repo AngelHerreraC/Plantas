@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@500&family=Poppins:wght@600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+        body{
+            background-color: #CDDACD;
+            font-family: 'Poppins';
+        }
+        .boton
+        {
+            background-color: #6B8E4E;
+            color: #FCFCFC;
+        }
+        .cuidados
+        {
+            background-color: #FFFFFF;
+        }
+        i{
+            font-size: 20px;
+            color: #6B8E4E
+        }
+    </style>
+</head>
+<body>
+    <div class="container-md container-lg " >
+        <form action="/api/plantas" id="form" class="" method="post">
+            <div class="row-cols-lg-1 m-2">
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control p-3">
+                </div>
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                    <input type="date" name="fecha" id="fecha" placeholder="" class="form-control p-3">
+                </div>
+                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                    <input type="text" name="origen" id="origen" placeholder="origen" class="form-control p-3">
+                </div>
+                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                    <select name="tipo-planta" id="tipo-planta" class="form-control" placeholder = "Tipo">
+                        <option value="arbol"></i>Arbol</option>
+                        <option value="flor">Flor</option>
+                        <option value="arbusto">Arbusto</option>
+                    </select>
+                </div>
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3 ">    
+                    <p>Cuidados</p>          
+                    <div class="row d-flex justify-content-between mb-2">
+                        <div class="col-1 ml-2">
+                            <label for=""> 
+                                <i class="bi bi-check-lg"></i>
+                            </label>
+                            <input type="checkbox" name='podar' class="form-check-label" id="check-podar">
+                        </div>
+                        <div class="col-4"> 
+                            <label for="podar" class="form-label">Podar</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" name= 'frec-podar' class="form-control p-1" id="frec-podar">
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between mb-2">
+                        <div class="col-1 ml-2">
+                            <label for=""> 
+                                <i class="bi bi-check-lg"></i>
+                            </label>
+                            <input type="checkbox" name='regar' class="form-check-label" id="check-regar">
+                        </div>
+                        <div class="col-4"> 
+                            <label for="regar" class="form-label ">Regar</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" name="frec-regar" class="form-control p-1" id="frec-regar">
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-between mb-2">
+                        <div class="col-1 ml-2">
+                            <label for=""> 
+                                <i class="bi bi-check-lg"></i>
+                            </label>
+                            <input type="checkbox" name='fertilizar' class="form-check-label" id="check-fertilizar">
+                        </div>
+                        <div class="col-4"> 
+                            <label for="fertilizar" class="form-label">Fertilizar</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="number" class="form-control p-1" name="frec-fertilizar" id="frec-fertilizar">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                    <label for="" class="form-label"> Clima</label>
+                    <select name="tipo-clima" id="tipo-clima" class="form-control" placeholder = "">
+                        <option value="calido">Calido</option>
+                        <option value="humedo">Humedo</option>
+                        <option value="seco">Seco</option>
+                        <option value="frio">Frio</option>
+                    </select>
+                </div>
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                    <input type="text" name="notas-especiales" id="notas-especiales" placeholder="Notas Especiales" class="form-control p-5">
+                </div>
+
+                
+            </div>
+            <div class="row m-2 mt-5">
+                <div class="col-md-12 col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                    <input type="submit" class="btn col-12 p-3 boton" value="Registrarse" id="btn">
+                </div>
+            </div>
+
+            <div class="row m-2 mt-5" id="respondiendo"></div>
+        </form>
+    </div>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="register.js"></script>
+</body>
+</html>
