@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <style>
+        
         body{
             background-color: #CDDACD;
             font-family: 'Poppins';
@@ -21,103 +22,145 @@
             background-color: #6B8E4E;
             color: #FCFCFC;
         }
+        .btn_div
+        {
+            background-color: #6B8E4E;
+            border-radius: 10px;
+        }
         .cuidados
         {
             background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 10px;
+           
         }
-        i{
-            font-size: 20px;
-            color: #6B8E4E
+        .frecuencia 
+        {
+            background-color: #CDDACD;
+            text-align: center;
         }
+        .frecuencia:hover
+        {
+            background-color: #CDDACD
+        }
+        .boton:hover
+        {
+           
+            color: #FCFCFC;
+        }
+        .form-control
+        {
+            border: none;
+        }
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            outline: none;
+            border: none;
+            background: none;
+        }
+        input[type="checkbox"]::before {
+            content: '\2714'; 
+            display: block;
+            width: 1em;
+            height: 1em;
+            font-size: 20px; 
+            color: #CDDACD; 
+            text-align: center;
+            line-height: 1em;
+            margin-top: 2px; 
+        }
+        input[type="checkbox"]:checked::before {
+            color: #6B8E4E;
+        }
+
     </style>
 </head>
 <body>
     <div class="container-md container-lg " >
         <form action="/api/plantas" id="form" class="" method="post">
             <div class="row-cols-lg-1 m-2">
-                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control p-3">
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control p-3" required>
                 </div>
-                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3">
-                    <input type="date" name="fecha" id="fecha" placeholder="" class="form-control p-3">
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
+                    <input type="date" name="fecha" id="fecha" placeholder="" class="form-control p-3" required>
                 </div>
-                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3">
-                    <input type="text" name="origen" id="origen" placeholder="origen" class="form-control p-3">
+                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
+                    <input type="text" name="origen" id="origen" placeholder="Origen" class="form-control p-3" required>
                 </div>
-                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3">
-                    <select name="tipo-planta" id="tipo-planta" class="form-control" placeholder = "Tipo">
+                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
+                    <select name="tipo-planta" id="tipo-planta" class="form-control col-md" placeholder = "Tipo" required>
                         <option value="arbol"></i>Arbol</option>
                         <option value="flor">Flor</option>
                         <option value="arbusto">Arbusto</option>
                     </select>
                 </div>
-                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3 ">    
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">    
                     <p>Cuidados</p>          
-                    <div class="row d-flex justify-content-between mb-2">
+                    <div class="row d-flex justify-content-between mb-2" >
                         <div class="col-1 ml-2">
                             <label for=""> 
-                                <i class="bi bi-check-lg"></i>
                             </label>
-                            <input type="checkbox" name='podar' class="form-check-label" id="check-podar">
+                            <input type="checkbox" name='podar' class="" id="check-podar" onchange="habilitarInput('check-podar', 'frec-podar')">
                         </div>
                         <div class="col-4"> 
                             <label for="podar" class="form-label">Podar</label>
                         </div>
                         <div class="col-2">
-                            <input type="number" name= 'frec-podar' class="form-control p-1" id="frec-podar">
+                            <input type="number" name= 'frec-podar' class="form-control frecuencia"  id="frec-podar" disabled maxlength="2" pattern="\d*">
                         </div>
                     </div>
                     <div class="row d-flex justify-content-between mb-2">
                         <div class="col-1 ml-2">
                             <label for=""> 
-                                <i class="bi bi-check-lg"></i>
                             </label>
-                            <input type="checkbox" name='regar' class="form-check-label" id="check-regar">
+                            <input type="checkbox" name='regar' class="" id="check-regar" onchange="habilitarInput('check-regar', 'frec-regar')">
                         </div>
                         <div class="col-4"> 
                             <label for="regar" class="form-label ">Regar</label>
                         </div>
                         <div class="col-2">
-                            <input type="number" name="frec-regar" class="form-control p-1" id="frec-regar">
+                            <input type="number" name="frec-regar" class="form-control frecuencia" id="frec-regar" maxlength="2" disabled>
                         </div>
                     </div>
                     <div class="row d-flex justify-content-between mb-2">
                         <div class="col-1 ml-2">
                             <label for=""> 
-                                <i class="bi bi-check-lg"></i>
                             </label>
-                            <input type="checkbox" name='fertilizar' class="form-check-label" id="check-fertilizar">
+                            <input type="checkbox" name='fertilizar' class="" id="check-fertilizar" onchange="habilitarInput('check-fertilizar', 'frec-fertilizar')">
                         </div>
                         <div class="col-4"> 
                             <label for="fertilizar" class="form-label">Fertilizar</label>
                         </div>
                         <div class="col-2">
-                            <input type="number" class="form-control p-1" name="frec-fertilizar" id="frec-fertilizar">
+                            <input type="number" class="form-control frecuencia" name="frec-fertilizar" id="frec-fertilizar" disabled maxlength="2">
                         </div>
                     </div>
                 </div>
-                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3">
-                    <label for="" class="form-label"> Clima</label>
-                    <select name="tipo-clima" id="tipo-clima" class="form-control" placeholder = "">
+                <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
+                    <label for="" class="form-label col-lg-12"> Clima</label>
+                    <select name="tipo-clima" id="tipo-clima" class="form-control col-lg-12" placeholder = "" required>
                         <option value="calido">Calido</option>
                         <option value="humedo">Humedo</option>
                         <option value="seco">Seco</option>
                         <option value="frio">Frio</option>
                     </select>
                 </div>
-                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
                     <input type="text" name="notas-especiales" id="notas-especiales" placeholder="Notas Especiales" class="form-control p-5">
                 </div>
 
                 
             </div>
             <div class="row m-2 mt-5">
-                <div class="col-md-12 col-lg-6 mt-3 m-lg-auto mt-lg-3">
+                <div class="col-md-12 col-lg-6 mt-3 m-lg-auto mt-lg-3 btn_div">
                     <input type="submit" class="btn col-12 p-3 boton" value="Registrarse" id="btn">
                 </div>
             </div>
 
-            <div class="row m-2 mt-5" id="respondiendo"></div>
+            
         </form>
     </div>
 
