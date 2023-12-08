@@ -16,7 +16,12 @@ document.querySelector("#form").addEventListener("submit", async (e) =>
     
     console.log(datosCompletos)
     const validation = validandoDatosFomr(datosCompletos)
-    mandarAlerta(validation)
+
+    
+    if (mandarAlerta(validation))
+    {
+        return
+    }
 
     const res = await fetch('http://localhost:3000/api/plantas', {
         method: "POST",

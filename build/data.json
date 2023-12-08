@@ -55,5 +55,31 @@
     "frec-fertilizar": "4",
     "tipo-clima": "calido",
     "notas-especiales": "awdad"
+  },
+  {
+    "nombre": "awdadw",
+    "fecha": "2023-12-12",
+    "origen": "Sepa",
+    "tipo-planta": "arbol",
+    "tipo-clima": "seco",
+    "notas-especiales": "awdawdaw"
+  },
+  {
+    "nombre": "Adalberto",
+    "fecha": "2023-12-18",
+    "origen": "wa",
+    "tipo-planta": "flor",
+    "tipo-clima": "humedo",
+    "notas-especiales": ""
+  },
+  {
+    "nombre": "Adalberto",
+    "fecha": "2023-12-18",
+    "origen": "wa",
+    "tipo-planta": "flor",
+    "podar": "on",
+    "frec-podar": "1",
+    "tipo-clima": "humedo",
+    "notas-especiales": ""
   }
 ]
