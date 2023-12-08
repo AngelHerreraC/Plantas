@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@500&family=Poppins:wght@600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #CDDACD;
+            font-family: 'Poppins';
+        }
+        .background
+        {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        .background-input
+        {
+            background-color: #ccd5ae;
+            border-radius: 10px;
+            
+        }
+        .form-control
+        {
+            background: transparent;
+            color: black;
+            outline: none;
+            border: none;
+        }
+        .text-primary
+        {
+            color: #3C5148 !important;
+            font-family: 'Poppins';
+        }
+        .boton
+        {
+            background-color: #6B8E4E;
+            border-radius: 10px;
+            color: #FFFFFF;
+        }
+        .boton:hover
+        {
+            background-color: #6B8E4E;
+            border-radius: 10px;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex align-items-center justify-content-center vh-100">
+        <div class="row">
+            <div class="col-lg-12 col-sm-10">
+                <div class="row-cols-lg-1 background p-3">
+                    <div class="col-lg-12 m-lg-auto text-center my-lg-5">
+                        <h1 class="text-primary">Ingrese su tipo de clima</h1>
+                    </div>
+                    <div class="col-lg-10 m-lg-auto background-input p-2 my-lg-5">
+                        <select name="tipo-clima-usuario" id="tipo-clima-usuario" class="form-control col-md"required>
+                            <option value="calido"></i>Calido</option>
+                            <option value="humedo">Flor</option>
+                            <option value="seco">Seco</option>
+                            <option value="frio">Frio</option>
+                        </select>                    
+                    </div>
+                    <div class="col-lg-10 mt-3 mt-lg-3 btn_div m-auto">
+                        <input type="submit" class="col-12 btn p-3 boton" value="Registrarse" id="btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="weather.js"></script>
+</body>
+</html>
