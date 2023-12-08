@@ -22,6 +22,10 @@
             background-color: #6B8E4E;
             color: #FCFCFC;
         }
+        .labels
+        {
+            color: #6B8E4E;
+        }
         .btn_div
         {
             background-color: #6B8E4E;
@@ -59,6 +63,7 @@
             outline: none;
             border: none;
             background: none;
+            
         }
         input[type="checkbox"]::before {
             content: '\2714'; 
@@ -91,6 +96,7 @@
                     <input type="text" name="origen" id="origen" placeholder="Origen" class="form-control p-3" required>
                 </div>
                 <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
+                    <label for="tipo-planta" class="form-label col-12 labels">Tipo de Planta</label>
                     <select name="tipo-planta" id="tipo-planta" class="form-control col-md" placeholder = "Tipo" required>
                         <option value="arbol"></i>Arbol</option>
                         <option value="flor">Flor</option>
@@ -99,11 +105,11 @@
                 </div>
                 <div class="col-md col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">    
                     <p>Cuidados</p>          
-                    <div class="row d-flex justify-content-between mb-2" >
+                    <div class="row d-flex justify-content-between mb-2 align-items-center" >
                         <div class="col-1 ml-2">
                             <label for=""> 
                             </label>
-                            <input type="checkbox" name='podar' class="" id="check-podar" onchange="habilitarInput('check-podar', 'frec-podar')">
+                            <input type="checkbox" name='podar' class="m-sm-auto" id="check-podar" onchange="habilitarInput('check-podar', 'frec-podar')">
                         </div>
                         <div class="col-4"> 
                             <label for="podar" class="form-label">Podar</label>
@@ -140,7 +146,7 @@
                     </div>
                 </div>
                 <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
-                    <label for="" class="form-label col-lg-12"> Clima</label>
+                    <label for="" class="form-label col-12 labels" > Clima</label>
                     <select name="tipo-clima" id="tipo-clima" class="form-control col-lg-12" placeholder = "" required>
                         <option value="calido">Calido</option>
                         <option value="humedo">Humedo</option>
