@@ -99,5 +99,27 @@
     "frec-podar": "1",
     "tipo-clima": "calido",
     "notas-especiales": "wadawd"
+  },
+  {
+    "nombre": "Adalberto",
+    "fecha": "2023-12-05",
+    "origen": "awd",
+    "tipo-planta": "flor",
+    "podar": "on",
+    "frec-podar": "1",
+    "regar": "on",
+    "frec-regar": "2",
+    "tipo-clima": "calido",
+    "notas-especiales": ""
+  },
+  {
+    "nombre": "Adalberto",
+    "fecha": "2021-12-13",
+    "origen": "Sepa",
+    "tipo-planta": "arbol",
+    "regar": "on",
+    "frec-regar": "",
+    "tipo-clima": "calido",
+    "notas-especiales": ""
   }
 ]
