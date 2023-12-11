@@ -5,12 +5,13 @@ document.querySelector("#btn").addEventListener('click', e =>
 
 
     console.log(clima.value)
+    guardarLocalStorage(clima.value)
 
     alert("Se registro el tipo de clima")
 })
 
 
-function guardarLocalStorage()
+function guardarLocalStorage(type)
 {
-    
+    localStorage.setItem(`type`, type)
 }
