@@ -11,6 +11,7 @@ const PORT = 3000;
 app.use(express_1.default.static(path_1.default.join(__dirname, 'build')));
 app.use(express_1.default.static(path_1.default.join(__dirname, 'register')));
 app.use(express_1.default.static(path_1.default.join(__dirname, 'weather')));
+app.use(express_1.default.static(path_1.default.join(__dirname, 'viewPlants')));
 app.use(express_1.default.json());
 // app.use(express.static(path.join(__dirname, 'register')))
 // app.get('/register', (_req ,res) => {
@@ -18,6 +19,12 @@ app.use(express_1.default.json());
 //   });
 app.get('/register', (_req, res) => {
     res.sendFile(path_1.default.join(__dirname, 'register', 'register.html'));
+});
+app.get('/weather', (_req, res) => {
+    res.sendFile(path_1.default.join(__dirname, 'weather', 'weather.html'));
+});
+app.get('/plants', (_req, res) => {
+    res.sendFile(path_1.default.join(__dirname, 'viewPlants', 'plants.html'));
 });
 app.use('/api/plantas', plantsroutes_1.default);
 app.listen(PORT, () => {

@@ -1,38 +1,5 @@
 [
   {
-    "nombre": "",
-    "fecha": "",
-    "origen": "",
-    "tipo-planta": "arbol",
-    "frec-podar": "",
-    "frec-regar": "",
-    "frec-fertilizar": "",
-    "tipo-clima": "calido",
-    "notas-especiales": ""
-  },
-  {
-    "nombre": "",
-    "fecha": "",
-    "origen": "",
-    "tipo-planta": "arbol",
-    "frec-podar": "",
-    "frec-regar": "",
-    "frec-fertilizar": "",
-    "tipo-clima": "calido",
-    "notas-especiales": ""
-  },
-  {
-    "nombre": "",
-    "fecha": "",
-    "origen": "",
-    "tipo-planta": "arbol",
-    "frec-podar": "",
-    "frec-regar": "",
-    "frec-fertilizar": "",
-    "tipo-clima": "calido",
-    "notas-especiales": ""
-  },
-  {
     "nombre": "Adalberto",
     "fecha": "2023-12-07",
     "origen": "wa",
