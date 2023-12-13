@@ -118,5 +118,33 @@
     "frec-podar": "2",
     "tipo-clima": "humedo",
     "notas-especiales": "ADADADADADA"
+  },
+  {
+    "nombre": "PRUEBA 3",
+    "fecha": "2023-12-13",
+    "origen": "YO",
+    "tipo-planta": "flor",
+    "podar": "on",
+    "frec-podar": "2",
+    "regar": "on",
+    "frec-regar": "4",
+    "fertilizar": "on",
+    "frec-fertilizar": "3",
+    "tipo-clima": "humedo",
+    "notas-especiales": "ADAWDAWD"
+  },
+  {
+    "nombre": "PRUEBA TESTING PA VER NOMAS",
+    "fecha": "2023-12-10",
+    "origen": "ll",
+    "tipo-planta": "flor",
+    "podar": "on",
+    "frec-podar": "3",
+    "regar": "on",
+    "frec-regar": "1",
+    "fertilizar": "on",
+    "frec-fertilizar": "1",
+    "tipo-clima": "seco",
+    "notas-especiales": "ADAWD"
   }
 ]

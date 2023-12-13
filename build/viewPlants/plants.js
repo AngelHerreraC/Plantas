@@ -1,13 +1,13 @@
-// function getPlants()
-// {
-//     fetch('http://localhost:3000/api/plantas')
-//     .then(response => response.json())
-//     .then((detalle => 
-//         {
+function getPlants()
+{
+    fetch('http://localhost:3000/api/plantas')
+    .then(response => response.json())
+    .then((detalle => 
+        {
            
-//             maquetando(detalle)
-//         }))
-// }
+            maquetando(detalle)
+        }))
+}
 
 function maquetando(e)
 {
@@ -42,7 +42,7 @@ function maquetando(e)
     container_plant.appendChild(fragmento_plant)
 }
 
-// getPlants();
+getPlants();
 
 
 module.exports = { maquetando }
