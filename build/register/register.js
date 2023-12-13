@@ -19,22 +19,14 @@ async function manejarEnvioForm(e)
 {
     
         e.preventDefault();
-        
-    
-    
         const formData = new FormData(e.currentTarget);
-    
-    
         const datosCompletos = {};
         formData.forEach((value, key) => {
             datosCompletos[key] = value;
         });
-        
-        
+
         console.log(datosCompletos)
         const validation = validandoDatosFomr(datosCompletos)
-    
-        
         if (mandarAlerta(validation))
         {
             return
