@@ -1,36 +1,54 @@
-document.querySelector("#form").addEventListener("submit", async (e) => 
+
+
+
+
+
+function inicializarForm(form)
 {
+    form.addEventListener("submit", manejarEnvioForm)
+}
 
-    e.preventDefault();
+const formlario = document.querySelector("#form");
+if (formlario)
+{
+    inicializarForm(formlario);
+}
+
+
+async function manejarEnvioForm(e)
+{
     
-
-
-    const formData = new FormData(e.currentTarget);
-
-
-    const datosCompletos = {};
-    formData.forEach((value, key) => {
-        datosCompletos[key] = value;
-    });
+        e.preventDefault();
+        
     
     
-    console.log(datosCompletos)
-    const validation = validandoDatosFomr(datosCompletos)
-
+        const formData = new FormData(e.currentTarget);
     
-    if (mandarAlerta(validation))
-    {
-        return
-    }
-
-    const res = await fetch('http://localhost:3000/api/plantas', {
-        method: "POST",
-        headers: {
-            "Content-Type" : "application/json"
-        },
-        body : JSON.stringify(datosCompletos)
-    })
-})
+    
+        const datosCompletos = {};
+        formData.forEach((value, key) => {
+            datosCompletos[key] = value;
+        });
+        
+        
+        console.log(datosCompletos)
+        const validation = validandoDatosFomr(datosCompletos)
+    
+        
+        if (mandarAlerta(validation))
+        {
+            return
+        }
+    
+        const res = await fetch('http://localhost:3000/api/plantas', {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body : JSON.stringify(datosCompletos)
+        })
+     
+}
 
 function validandoDatosFomr(form)
 {
@@ -67,3 +85,5 @@ function habilitarInput(checkBoxId, inputDatosID)
             inputDatos.value = "";
         }
 }
+
+module.exports = { manejarEnvioForm }

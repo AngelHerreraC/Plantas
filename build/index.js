@@ -19,6 +19,9 @@ app.use(express_1.default.json());
 app.get('/register', (_req, res) => {
     res.sendFile(path_1.default.join(__dirname, 'register', 'register.html'));
 });
+app.get('/weather', (_req, res) => {
+    res.sendFile(path_1.default.join(__dirname, 'weather', 'weather.html'));
+});
 app.use('/api/plantas', plantsroutes_1.default);
 app.listen(PORT, () => {
     console.log(`Servidor en ejecución en http://localhost:${PORT}`);
