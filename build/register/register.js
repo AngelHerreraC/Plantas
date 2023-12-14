@@ -27,10 +27,9 @@ async function manejarEnvioForm(e)
 
         console.log(datosCompletos)
         const validation = validandoDatosFomr(datosCompletos)
-        if (mandarAlerta(validation))
-        {
-            return
-        }
+        mandarAlerta(validation)
+        
+            
     
         const res = await fetch('http://localhost:3000/api/plantas', {
             method: "POST",

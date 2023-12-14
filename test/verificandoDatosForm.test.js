@@ -48,7 +48,7 @@ test('Manejo de datos para verificar la informacion a traves del Form', async ()
                                 <label for="podar" class="form-label">Podar</label>
                             </div>
                             <div class="col-2">
-                                <input type="number" name= 'frec-podar' class="form-control frecuencia"  id="frec-podar" disabled maxlength="2" pattern="\d*">
+                                <input type="number" name= 'frec-podar' class="form-control frecuencia"  id="frec-podar" disabled maxlength="2">
                             </div>
                         </div>
                         <div class="row d-flex justify-content-between mb-2">

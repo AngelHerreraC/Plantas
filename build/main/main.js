@@ -85,11 +85,6 @@ function crearRecordatorio(fechActual, fechaOriginal, plantRecor)
     const fechaRecordatorio = new Date(fechaOriginal.replace(/-/g, '/'));
     const diferenciaMili = fechActual - fechaRecordatorio;
     const diferentDias = Math.floor(diferenciaMili / (1000 * 60 * 60 *24))
-    // console.log('Fecha Original:', fechaOriginal);
-    // console.log('Fecha Recordatorio o Convertida:', fechaRecordatorio);
-    // console.log('Fecha Actual:', fechActual);
-    // console.log('DiferentMili:', diferenciaMili);
-    // console.log('DiferenteDiass:', diferentDias);
 
 
     let onRegar = false;
