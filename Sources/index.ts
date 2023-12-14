@@ -16,14 +16,6 @@ app.use(express.static(path.join(__dirname, 'viewPlants')));
 app.use(express.static(path.join(__dirname, 'main')));
 
 
-
-// app.use(express.static(path.join(__dirname, 'register')))
-
-
-// app.get('/register', (_req ,res) => {
-//     res.sendFile(path.join(__dirname,'register', 'register.html'));
-//   });
-
 app.get('/', (_req, res) => {
   res.sendFile(path.join(__dirname, 'weather', 'weather.html'))
 })
