@@ -36,7 +36,7 @@ describe('Probando los endpoints de la API Plants, tanto get como post', () => {
             });
         });
     }));
-    test('POST /api/plantas devuelve una respuesta exitosa con el caso de mandando campos vacios en campos opcionales', () => __awaiter(void 0, void 0, void 0, function* () {
+    test('POST / envia una respuesta exitosa con el caso de mandando campos vacios en campos opcionales', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request(index_1.default)
             .post('/api/plantas')
             .send({
@@ -54,7 +54,7 @@ describe('Probando los endpoints de la API Plants, tanto get como post', () => {
         expect(response.statusCode).toBe(201);
         expect(response.body).toHaveProperty('mensaje', 'Planta Añadida');
     }));
-    test('POST /api/plantas devuelve una respuesta exitosa con el caso de mandando todos los campos', () => __awaiter(void 0, void 0, void 0, function* () {
+    test('POST / envia una respuesta exitosa con el caso de mandando todos los campos', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request(index_1.default)
             .post('/api/plantas')
             .send({

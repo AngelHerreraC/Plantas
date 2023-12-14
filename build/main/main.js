@@ -16,7 +16,7 @@ function maquetando(e)
     let primerElementoProcesado = false;
 
     const template_plants = document.querySelector(".template_card")
-    fragmento_plant = document.createDocumentFragment();
+    const fragmento_plant = document.createDocumentFragment();
 
     e.forEach(element => {
 

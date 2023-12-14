@@ -14,7 +14,7 @@ function maquetando(e)
 
     const template_plants = document.querySelector(".template_plants")
     console.log('Template plants: ', template_plants)
-    fragmento_plant = document.createDocumentFragment();
+    const fragmento_plant = document.createDocumentFragment();
     e.forEach(element => {
         
 

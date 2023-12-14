@@ -66,8 +66,8 @@ function mandarAlerta(validation)
 
 function habilitarInput(checkBoxId, inputDatosID)
 {
-    checkBox = document.getElementById(checkBoxId);
-    inputDatos = document.getElementById(inputDatosID);
+    const checkBox = document.getElementById(checkBoxId);
+    const inputDatos = document.getElementById(inputDatosID);
 
         // Habilitar o deshabilitar el input según el estado del checkbox
         inputDatos.disabled = !checkBox.checked;
