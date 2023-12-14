@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@500&family=Poppins:wght@600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: #CDDACD;
+            font-family: 'Poppins';
+            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .background
+        {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 20px;
+            
+        }
+        .btn
+        {
+
+            background-color: #6B8E4E;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+        }
+        .btn:hover
+        {
+            background-color: #6B8E4E;
+            
+        }
+        .btn:active
+        {
+            background-color: #6B8E4E;
+        }
+        .btn > div > div > a 
+        {
+            color: #FFFFFF;
+            text-align: right;
+        }
+        .btn-personalizados
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        ion-icon
+        {
+           font-size: 20px;
+           color: #FFFFFF;
+        }
+        .card, .card-header
+        {
+            background: transparent;
+            border: none;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 vh-100 mb-5">
+        <div class="row-cols-1" id="accordion">
+            <div class="col-sm-12 col-lg-8 mx-auto background" id="card_background">
+                
+            </div>
+            <div class="row-cols-1 btns text-center mt-5">
+                <div class="col-sm-12 col-lg-8 mx-auto btn p-3">
+                    <div class="row">
+                        <div class="col-12 btn-personalizados">
+                            <a href="">Agregar nueva planta</a>
+                            <ion-icon name="add-outline"></ion-icon>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-8 mx-auto mt-3 btn p-3">
+                    <div class="row">
+                        <div class="col-12 btn-personalizados">
+                            <a href="">Mis plantas</a>
+                            <ion-icon name="leaf-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <template class="template_card">
+        <div class="card">
+            <div class="row-cols-1">
+                <div class="col-lg-10 col-sm-12 text-center mx-auto">
+                    <p id="fechaActual">10/12/2023</p>
+                </div>
+                <div class="col-lg-10 col-sm-12 ml-3">
+                    <p id="nombre">Nombre: </p>
+                </div>
+                <div class="col-lg-10 col-sm-12 ml-3">
+                    <p id="tipo">Tipo: </p>
+                </div>
+                <div class="col-lg-10 col-sm-12 ml-3">
+                    <p id="clima">Clima: </p>
+                </div>
+                <div class="col-lg-10 col-sm-12 ml-3">
+                    <p id="fechaAdqui">Fecha de adquisicion: </p>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="col-lg-10 col-sm-12">
+                        <div id="recordatorios">
+                            <p>Recordatorios</p>
+                            <p id="podar">Podar</p>
+                            <p id="regar">Regar</p>
+                            <p id="fertilizar">Fertilizar</p>
+                        </div>
+                       </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="card-header " id="headingOne">
+                <div class="row">
+                    <div class="col-10 text-center mx-auto">
+                        <button class="btn btn-primary col-6" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <ion-icon name="caret-down-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <template>
+
+    </template>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
