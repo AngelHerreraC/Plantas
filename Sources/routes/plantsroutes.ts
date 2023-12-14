@@ -1,9 +1,6 @@
 import Express  from "express";
 import PlantService from "../services/RegistroService";
 
-
-
-
 const planService = new PlantService();
 
 
