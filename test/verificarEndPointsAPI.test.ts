@@ -34,7 +34,7 @@ describe('Probando los endpoints de la API Plants, tanto get como post' , () =>
 
 
 
-    test('POST /api/plantas devuelve una respuesta exitosa con el caso de mandando campos vacios en campos opcionales', async () => {
+    test('POST / envia una respuesta exitosa con el caso de mandando campos vacios en campos opcionales', async () => {
         const response = await request(app)
           .post('/api/plantas')
           .send({
@@ -54,7 +54,7 @@ describe('Probando los endpoints de la API Plants, tanto get como post' , () =>
         expect(response.body).toHaveProperty('mensaje', 'Planta Añadida');
       });
 
-    test('POST /api/plantas devuelve una respuesta exitosa con el caso de mandando todos los campos', async () => {
+    test('POST / envia una respuesta exitosa con el caso de mandando todos los campos', async () => {
         const response = await request(app)
           .post('/api/plantas')
           .send(
