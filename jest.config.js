@@ -1,6 +1,12 @@
-// jest.config.js
 module.exports = {
-    testEnvironment: 'jsdom',
-    // Agrega más configuraciones según sea necesario
-  };
-  
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testMatch: ['<rootDir>/test/**/*.test.(ts|js)'],
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.json',
+      isolatedModules: true,
+    },
+  },
+};

@@ -43,3 +43,4 @@ app.listen(PORT,()=>{
     console.log(`Servidor en ejecución en http://localhost:${PORT}`)
 })
 
+export default app
