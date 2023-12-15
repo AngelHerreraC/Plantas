@@ -45,5 +45,4 @@ function maquetando(e)
 getPlants();
 
 
-module.exports = { maquetando }
 

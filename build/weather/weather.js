@@ -1,4 +1,4 @@
-// window.addEventListener('beforeunload', clearLocalStorage)
+
 
 document.querySelector("#btn").addEventListener('click', e => 
 {
@@ -20,7 +20,3 @@ function guardarLocalStorage(type)
     localStorage.setItem(`type`, type)
 }
 
-// function clearLocalStorage()
-// {
-//     localStorage.clear()
-// }
