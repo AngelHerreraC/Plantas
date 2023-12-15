@@ -1,28 +1,12 @@
 [
   {
-    "nombre": "PRUEBA TESTING PA VER NOMAS",
-    "fecha": "2023-12-10",
-    "origen": "ll",
-    "tipo-planta": "flor",
-    "podar": "on",
-    "frec-podar": "3",
+    "nombre": "awdawd",
+    "fecha": "2023-12-13",
+    "origen": "awd",
+    "tipo-planta": "arbol",
     "regar": "on",
     "frec-regar": "1",
-    "fertilizar": "on",
-    "frec-fertilizar": "2",
-    "tipo-clima": "seco",
-    "notas-especiales": "ADAWD"
-  },
-  {
-    "nombre": "Plantita",
-    "fecha": "2023-12-05",
-    "origen": "Mexico, Tabasco",
-    "tipo-planta": "flor",
-    "podar": "on",
-    "frec-podar": "1",
-    "regar": "on",
-    "frec-regar": "1",
-    "tipo-clima": "humedo",
-    "notas-especiales": "awdawd"
+    "tipo-clima": "calido",
+    "notas-especiales": "awda"
   }
 ]
