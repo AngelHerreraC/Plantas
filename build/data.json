@@ -38,5 +38,25 @@
     "frec-podar": "1",
     "tipo-clima": "seco",
     "notas-especiales": "awdawd"
+  },
+  {
+    "nombre": "hwdawd",
+    "fecha": "2023-12-06",
+    "origen": "awdadwa",
+    "tipo-planta": "arbusto",
+    "regar": "on",
+    "frec-regar": "1",
+    "tipo-clima": "seco",
+    "notas-especiales": "awdawd"
+  },
+  {
+    "nombre": "hwdawd",
+    "fecha": "2023-12-06",
+    "origen": "awdadwa",
+    "tipo-planta": "flor",
+    "fertilizar": "on",
+    "frec-fertilizar": "2",
+    "tipo-clima": "calido",
+    "notas-especiales": "awdawd"
   }
 ]
