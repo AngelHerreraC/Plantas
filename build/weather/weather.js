@@ -10,6 +10,8 @@ document.querySelector("#btn").addEventListener('click', e =>
     guardarLocalStorage(clima.value)
 
     alert("Se registro el tipo de clima")
+
+    window.location.href = '../main'
 })
 
 

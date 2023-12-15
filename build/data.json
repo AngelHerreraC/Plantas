@@ -8,5 +8,25 @@
     "frec-regar": "1",
     "tipo-clima": "calido",
     "notas-especiales": "awda"
+  },
+  {
+    "nombre": "Adalberto",
+    "fecha": "2023-12-20",
+    "origen": "awd",
+    "tipo-planta": "arbusto",
+    "podar": "on",
+    "frec-podar": "1",
+    "tipo-clima": "frio",
+    "notas-especiales": "adwad"
+  },
+  {
+    "nombre": "Plamta 3",
+    "fecha": "2023-12-26",
+    "origen": "wa",
+    "tipo-planta": "flor",
+    "podar": "on",
+    "frec-podar": "1",
+    "tipo-clima": "seco",
+    "notas-especiales": "awdawd"
   }
 ]
