@@ -89,4 +89,3 @@ function habilitarInput(checkBoxId, inputDatosID)
         }
 }
 
-module.exports = { manejarEnvioForm }

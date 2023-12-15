@@ -99,7 +99,7 @@
                     <input type="text" name="origen" id="origen" placeholder="Origen" class="form-control p-3" required>
                 </div>
                 <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
-                    <label for="tipo-planta" class="form-label col-12 labels">Tipo de Planta</label>
+                    <label for="tipo-planta" class="form-label col-12 labels" for="tipo-planta">Tipo de Planta</label>
                     <select name="tipo-planta" id="tipo-planta" class="form-control col-md" placeholder = "Tipo" required>
                         <option value="arbol"></i>Arbol</option>
                         <option value="flor">Flor</option>
@@ -110,12 +110,12 @@
                     <p>Cuidados</p>          
                     <div class="row d-flex justify-content-between mb-2 align-items-center" >
                         <div class="col-1 ml-2">
-                            <label for=""> 
+                            <label for="check-podar"> 
                             </label>
                             <input type="checkbox" name='podar' class="m-sm-auto" id="check-podar" onchange="habilitarInput('check-podar', 'frec-podar')">
                         </div>
                         <div class="col-4"> 
-                            <label for="podar" class="form-label">Podar</label>
+                            <p for="podar" class="form-label">Podar</p>
                         </div>
                         <div class="col-2">
                             <input type="number" name= 'frec-podar' class="form-control frecuencia"  id="frec-podar" disabled maxlength="2" pattern="\d*">
@@ -123,12 +123,12 @@
                     </div>
                     <div class="row d-flex justify-content-between mb-2">
                         <div class="col-1 ml-2">
-                            <label for=""> 
+                            <label for="check-regar"> 
                             </label>
                             <input type="checkbox" name='regar' class="" id="check-regar" onchange="habilitarInput('check-regar', 'frec-regar')">
                         </div>
                         <div class="col-4"> 
-                            <label for="regar" class="form-label ">Regar</label>
+                            <p for="regar" class="form-label ">Regar</p>
                         </div>
                         <div class="col-2">
                             <input type="number" name="frec-regar" class="form-control frecuencia" id="frec-regar" maxlength="2" disabled>
@@ -136,12 +136,12 @@
                     </div>
                     <div class="row d-flex justify-content-between mb-2">
                         <div class="col-1 ml-2">
-                            <label for=""> 
+                            <label for="check-fertilizar"> 
                             </label>
                             <input type="checkbox" name='fertilizar' class="" id="check-fertilizar" onchange="habilitarInput('check-fertilizar', 'frec-fertilizar')">
                         </div>
                         <div class="col-4"> 
-                            <label for="fertilizar" class="form-label">Fertilizar</label>
+                            <p for="fertilizar" class="form-label">Fertilizar</p>
                         </div>
                         <div class="col-2">
                             <input type="number" class="form-control frecuencia" name="frec-fertilizar" id="frec-fertilizar" disabled maxlength="2">
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="col-md  col-lg-6 mt-3 m-lg-auto mt-lg-3 cuidados">
-                    <label for="" class="form-label col-12 labels" > Clima</label>
+                    <label for="tipo-clima" class="form-label col-12 labels" > Clima</label>
                     <select name="tipo-clima" id="tipo-clima" class="form-control col-lg-12" placeholder = "" required>
                         <option value="calido">Calido</option>
                         <option value="humedo">Humedo</option>
