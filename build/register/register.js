@@ -26,8 +26,20 @@ async function manejarEnvioForm(e)
         });
 
         console.log(datosCompletos)
+        const type = localStorage.getItem('type');
+        if (type != datosCompletos["tipo-clima"])
+        {
+            console.log(`Tipo Local ${type}, "Tipo Clima": ${datosCompletos["tipo-clima"]}`)
+            alert("El tipo de clima no es el correcto")
+        }
         const validation = validandoDatosFomr(datosCompletos)
         mandarAlerta(validation)
+
+
+       
+
+        
+
         
             
     

@@ -1,4 +1,4 @@
-window.addEventListener('beforeunload', clearLocalStorage)
+// window.addEventListener('beforeunload', clearLocalStorage)
 
 document.querySelector("#btn").addEventListener('click', e => 
 {
@@ -10,6 +10,8 @@ document.querySelector("#btn").addEventListener('click', e =>
     guardarLocalStorage(clima.value)
 
     alert("Se registro el tipo de clima")
+
+    window.location.href = '../main'
 })
 
 
@@ -18,7 +20,7 @@ function guardarLocalStorage(type)
     localStorage.setItem(`type`, type)
 }
 
-function clearLocalStorage()
-{
-    localStorage.clear()
-}
+// function clearLocalStorage()
+// {
+//     localStorage.clear()
+// }
